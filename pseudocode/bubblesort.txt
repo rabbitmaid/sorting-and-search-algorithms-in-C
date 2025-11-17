@@ -1,0 +1,11 @@
+BubbleSort(A)
+    n = length(A)
+
+    for i from 0 to n-2
+        for j from 0 to n-2-i
+            if A[j] > A[j + 1]
+                swap A[j] and A[j + 1]
+            endif
+        end for
+    end for
+end BubbleSort

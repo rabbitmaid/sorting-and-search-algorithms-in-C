@@ -1,0 +1,71 @@
+MergeSort(A)
+    if length(A) > 1
+        mid = length(A) / 2
+        left = A[0 to mid-1]
+        right = A[mid to end]
+
+        MergeSort(left)
+        MergeSort(right)
+
+        Merge(left, right, A)
+    end if
+end MergeSort
+
+
+Merge(left, right, A)
+    i = 0    // current index for left array
+    j = 0    // current index for right array
+    k = 0    // index for merged array A
+
+    while i < length(left) and j < length(right)
+        if left[i] <= right[j]
+            A[k] = left[i]
+            i = i + 1
+        else
+            A[k] = right[j]
+            j = j + 1
+        endif
+
+        k = k + 1
+    end while
+
+    // Copy remaining elements in left (if any)
+    while i < length(left)
+        A[k] = left[i]
+        i = i + 1
+        k = k + 1
+    end while
+
+    // Copy remaining elements in right (if any)
+    while j < length(right)
+        A[k] = right[j]
+        j = j + 1
+        k = k + 1
+    end while
+end Merge
+
+
+Explanation
+--------------
+
+if length(A) > 1
+
+If the array has 1 or 0 elements, it’s already sorted — stop splitting.
+
+Find the midpoint 
+mid = length(A) / 2
+Used to split the array into two halves.
+
+Create two subarrays
+left = A[0 to mid - 1]
+right = A[mid to end]
+
+Recursively sort each half
+MergeSort(left)
+MergeSort(right)
+Each half gets split again and again until you end up with many arrays of size 1.
+
+Merge the two sorted halves
+Merge(left, right, A)
+After both halves are individually sorted, you combine them into the original array A.
+

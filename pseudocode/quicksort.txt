@@ -1,0 +1,29 @@
+QuickSort(A, low, high)
+    if low < high
+        // Partition the array and get the pivot index
+        pi = Partition(A, low, high)
+
+        // Recursively sort elements before pivot
+        QuickSort(A, low, pi - 1)
+
+        // Recursively sort elements after pivot
+        QuickSort(A, pi + 1, high)
+    end if
+end QuickSort
+
+
+Partition(A, low, high)
+    pivot = A[high]        // choose the last element as pivot
+    i = low - 1
+
+    for j = low to high - 1
+        if A[j] <= pivot
+            i = i + 1
+            swap A[i] and A[j]
+        end if
+    end for
+
+    swap A[i + 1] and A[high]
+    
+    return i + 1
+end Partition

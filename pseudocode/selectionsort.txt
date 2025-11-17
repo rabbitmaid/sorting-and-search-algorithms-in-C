@@ -1,0 +1,20 @@
+SelectionSort(A)
+    n = length(A)
+
+    for i from 0 to n - 2
+        minIndex = i
+
+        for j from i + 1 to n - 1
+            if A[j] < A[minIndex]
+                minIndex = j
+            endif
+        end for
+
+        // Swap the found minimum element with the first element
+        if minIndex != i
+            swap A[i] and A[minIndex]
+        end if
+
+    end for
+end SelectionSort
+    
