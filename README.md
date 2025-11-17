@@ -31,6 +31,13 @@ Insertion Sort builds the sorted array one item at a time. It iterates through a
 - **Time Complexity**: O(n²)
 - **Space Complexity**: O(1)
 
+#### 4. Merge Sort (`mergesort.c`)
+
+Merge Sort is a divide-and-conquer algorithm that divides the array into halves, recursively sorts them, and then merges the sorted halves back together.
+
+- **Time Complexity**: O(n log n)
+- **Space Complexity**: O(n)
+
 ### Search Algorithms
 
 Coming soon...
@@ -40,6 +47,8 @@ Coming soon...
 - `bubblesort.c` - Bubble sort algorithm with main function
 - `selection.c` - Selection sort algorithm with main function
 - `insertion.c` - Insertion sort algorithm with main function
+- `mergesort.c` - Merge sort algorithm with main function
+- `pseudocode/` - Directory containing pseudocode for algorithms
 - `README.md` - This file
 
 ## How to Compile and Run
@@ -63,6 +72,13 @@ gcc selection.c -o selection.exe
 ```bash
 gcc insertion.c -o insertion.exe
 ./insertion.exe
+```
+
+### Compile Merge Sort
+
+```bash
+gcc mergesort.c -o mergesort.exe
+./mergesort.exe
 ```
 
 ## Example Output
