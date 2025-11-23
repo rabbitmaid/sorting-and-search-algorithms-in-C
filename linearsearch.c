@@ -1,20 +1,15 @@
 #include <stdio.h>
 
-void printa(int a[], int length) {
-    printf("\nList of elements\n");
-    for(int i = 0 ; i < length ; i++) {
-        printf("a[%d] = %d \n", i, a[i]);
-    }
-    printf("\n");
-}
 
-void linearSearch(int a[], int length, int target) {
+int linearSearch(int a[], int length, int target) {
     for(int index = 0 ; index < length ; index++) {
 
         if(a[index] == target) {
-            printf("Target found at index: %d", index);
+            return index;
         }
     }
+
+    return -1;
 }
 
 int main(void) {
@@ -23,5 +18,9 @@ int main(void) {
     int target = 6;
     int length = sizeof(numbers) / sizeof(numbers[0]);
 
-    linearSearch(numbers, length, target);
+    int result = linearSearch(numbers, length, target);
+
+    if(result != -1) {
+        printf("Target found at index: %d", result);
+    }
 }

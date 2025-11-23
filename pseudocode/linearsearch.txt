@@ -1,0 +1,12 @@
+procedure LinearSearch(A, target)
+    // A is an array or list
+    // target is the value to find
+
+    for i ← 0 to length(A) − 1 do
+        if A[i] = target then
+            return i        // Found at index i
+        end if
+    end for
+
+    return -1               // Not found
+end procedure
