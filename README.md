@@ -40,7 +40,21 @@ Merge Sort is a divide-and-conquer algorithm that divides the array into halves,
 
 ### Search Algorithms
 
-Coming soon...
+#### 1. Linear Search (`linearsearch.c`)
+
+Linear Search is a simple search algorithm that sequentially checks each element in the array until the target element is found or the end of the array is reached.
+
+- **Time Complexity**: O(n)
+- **Space Complexity**: O(1)
+- **Best for**: Unsorted arrays or small datasets
+
+#### 2. Binary Search (`binarysearch.c`)
+
+Binary Search is a more efficient search algorithm that works on sorted arrays. It repeatedly divides the search interval in half, comparing the middle element with the target to eliminate half of the remaining elements.
+
+- **Time Complexity**: O(log n)
+- **Space Complexity**: O(1)
+- **Requirement**: Array must be sorted
 
 ## Project Structure
 
@@ -48,6 +62,8 @@ Coming soon...
 - `selection.c` - Selection sort algorithm with main function
 - `insertion.c` - Insertion sort algorithm with main function
 - `mergesort.c` - Merge sort algorithm with main function
+- `linearsearch.c` - Linear search algorithm with main function
+- `binarysearch.c` - Binary search algorithm with main function
 - `pseudocode/` - Directory containing pseudocode for algorithms
 - `README.md` - This file
 
@@ -79,6 +95,20 @@ gcc insertion.c -o insertion.exe
 ```bash
 gcc mergesort.c -o mergesort.exe
 ./mergesort.exe
+```
+
+### Compile Linear Search
+
+```bash
+gcc linearsearch.c -o linearsearch.exe
+./linearsearch.exe
+```
+
+### Compile Binary Search
+
+```bash
+gcc binarysearch.c -o binarysearch.exe
+./binarysearch.exe
 ```
 
 ## Example Output
