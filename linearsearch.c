@@ -22,5 +22,7 @@ int main(void) {
 
     if(result != -1) {
         printf("Target found at index: %d", result);
+    }else {
+        printf("Target not found");
     }
 }
